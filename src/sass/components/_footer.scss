@@ -1,0 +1,241 @@
+footer {
+  width: 100%;
+  background-color: #191c26;
+  color: white;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height, or 167% */
+
+  letter-spacing: 0.02em;
+}
+.booking {
+  padding: 30px;
+  //   outline: 2px solid teal;
+
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+}
+.booking-list {
+  // color: rgba(157, 164, 189, 0.4);
+  &-item {
+    // outline: 1px solid red;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  &-item:hover &-label,
+  &-item:focus &-label {
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+  }
+  &-item:focus &-input,
+  &-item:hover &-input {
+    opacity: 1;
+    border-bottom: 1px solid #9da4bd;
+  }
+  &-input {
+    outline: none;
+    border: none;
+    opacity: 0.4;
+    border-bottom: 1px solid #9da4bd;
+    background-color: #191c26;
+    height: 24px;
+    width: 100%;
+  }
+}
+.booking-last-item {
+  margin-bottom: 0;
+  height: 76px;
+}
+.booking-list {
+  &-item {
+    position: relative;
+  }
+  &-input {
+    line-height: 24px;
+  }
+  &-label {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &-item:focus &-label,
+  &-item:hover &-label {
+    top: -20px;
+  }
+  &-input:not(:placeholder-shown) ~ &-label {
+    top: -20px;
+    color: white;
+  }
+  &-input:focus-within,
+  &-input:not(:focus-within) {
+    color: white;
+    opacity: 1;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  &-input:focus-within ~ &-label {
+    //   &-input:not(:focus-within) ~ &-label {
+    color: white;
+  }
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.back {
+  width: 100%;
+  min-height: 496px;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // background-image: url(../../images/footer/back_footer.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  overflow: hidden;
+  @media screen and (min-width: 480px) {
+    background-size: cover;
+    background-position: center;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+}
+.contacts {
+  // & * {
+  //   outline: 1px solid red;
+  // }
+  //   outline: 2px solid rgb(0, 128, 38);
+  display: block;
+
+  width: 100%;
+  min-height: 496px;
+  z-index: 10;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  &-inner {
+    position: absolute;
+    width: 100%;
+    min-height: 496px;
+    padding: 30px;
+  }
+}
+.contacts-work-time {
+  color: white;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.contacts-list {
+  color: #9da4bd;
+  &-item {
+    margin: 0 0 25px 0;
+    display: flex;
+    align-items: center;
+  }
+}
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+.media-link {
+  display: flex;
+  justify-content: flex-end;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.2em;
+  &-instagram {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    color: #303030;
+  }
+  &-youtube {
+    display: flex;
+    align-items: center;
+    color: #303030;
+  }
+}
+.copyright {
+  display: flex;
+  background-color: white;
+  width: 100%;
+
+  &-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+  }
+  &-title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    /* identical to box height */
+
+    letter-spacing: 0.2em;
+
+    color: #9da4bd;
+  }
+  &-inner {
+    width: 100%;
+    padding: 45px 30px 45px 30px;
+  }
+}
+.copyright-mark {
+  display: flex;
+  align-items: center;
+}
+.inner-line {
+  // position: relative;
+  width: 100px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+.inner-line::before {
+  content: ' ';
+  // position: absolute;
+  width: 60px;
+  height: 1px;
+  display: block;
+  background-color: #9da4bd;
+  margin: 0 20px 0 0;
+}
