@@ -4,4 +4,13 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './example';
+@import './utils/normalize';
+@import './utils/variables';
+
+@import './components/header';
+@import './components/section-1';
+@import './components/section-2';
+@import './components/section-3';
+@import './components/section-4';
+@import './components/section-5';
+@import './components/footer';
