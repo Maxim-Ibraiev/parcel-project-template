@@ -1,24 +1,38 @@
+*,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .section-pricelist {
-  position: relative;
-  background-color: #111319;
+  background: #111319;
+  background-image: url('../images/section-price/bg-price-mobile.png'),
+    linear-gradient(#111319, #111319);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url('../images/section-price/bg-price-mobile@2x.png');
+    }
+  }
 }
 
-.pricelist {
-  //   background-image: url('../images/section-2/bg-price-mobile.jpg');
+.pricelist-container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 84px;
-  padding-bottom: 84px;
+  padding: 84px 15px;
 
   font-family: Open Sans;
   font-style: normal;
+  text-align: center;
 
   @media screen and (min-width: 480px) {
     width: 480px;
@@ -44,6 +58,7 @@
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  text-align: left;
 
   color: rgba(157, 164, 189, 0.6);
 
@@ -65,6 +80,7 @@
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+  text-align: left;
 
   color: #ffffff;
 }
@@ -73,7 +89,7 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 50px;
-  width: 100%;
+  // width: 100%;
 
   font-weight: normal;
   font-size: 14px;
