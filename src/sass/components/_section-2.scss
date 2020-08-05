@@ -1,10 +1,24 @@
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.section-pricelist {
+  position: relative;
+  background-color: #111319;
+}
+
 .pricelist {
+  //   background-image: url('../images/section-2/bg-price-mobile.jpg');
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 84px;
   padding-bottom: 84px;
+
+  font-family: Open Sans;
+  font-style: normal;
 
   @media screen and (min-width: 480px) {
     width: 480px;
@@ -20,11 +34,39 @@
 }
 
 .pricelist-subtitle {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
   margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.6);
+
+  &::before {
+    content: '';
+    display: inline-block;
+    align-items: center;
+    margin-right: 20px;
+    width: 60px;
+    height: 1px;
+    background: rgba(157, 164, 189, 0.6);
+  }
 }
 
 .pricelist-title {
   margin-bottom: 44px;
+
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
 }
 
 .pricelist-box {
@@ -32,6 +74,14 @@
   margin-left: auto;
   margin-bottom: 50px;
   width: 100%;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 
 .pricelist-list {
@@ -40,11 +90,47 @@
   padding: 30px;
 }
 
+.pricelist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .line {
   display: inline-block;
+  flex-grow: 1;
+
   margin-right: 6px;
   margin-left: 6px;
-  width: 30%;
+
   height: 1px;
-  background: black;
+  background: rgba(157, 164, 189, 0.12);
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  text-decoration: none;
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #303030;
+  cursor: pointer;
+
+  &.secondary {
+    color: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    background: #ff6c00;
+    color: #ffffff;
+  }
 }
