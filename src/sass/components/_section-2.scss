@@ -5,6 +5,7 @@
 }
 
 .section-pricelist {
+  max-width: 1280px;
   background: #111319;
   background-image: url('../images/section-price/bg-price-mobile.png'),
     linear-gradient(#111319, #111319);
@@ -15,12 +16,41 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    .hero {
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.8),
-          rgba(47, 48, 58, 0.8)
-        ),
-        url('../images/section-price/bg-price-mobile@2x.png');
+    & {
+      background-image: url('../images/section-price/bg-price-mobile@2x.png'),
+        linear-gradient(#111319, #111319);
+    }
+  }
+
+  @media screen and (min-width: 577px) {
+    & {
+      background-image: url('../images/section-price/bg-price-tablet.png'),
+        linear-gradient(#111319, #111319);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url('../images/section-price/bg-price-tablet@2x.png'),
+          linear-gradient(#111319, #111319);
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    & {
+      background-image: url('../images/section-price/bg-price-desktop.png'),
+        linear-gradient(#111319, #111319);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url('../images/section-price/bg-price-desktop@2x.png'),
+          linear-gradient(#111319, #111319);
+      }
     }
   }
 }
@@ -28,7 +58,7 @@
 .pricelist-container {
   margin-right: auto;
   margin-left: auto;
-  padding: 84px 15px;
+  padding: 84px 31px;
 
   font-family: Open Sans;
   font-style: normal;
@@ -40,10 +70,12 @@
 
   @media screen and (min-width: 768px) {
     width: 768px;
+    padding: 100px 39px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
+    padding: 130px 15px;
   }
 }
 
@@ -74,6 +106,7 @@
 }
 
 .pricelist-title {
+  margin: 0;
   margin-bottom: 44px;
 
   font-weight: bold;
@@ -89,7 +122,6 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 50px;
-  // width: 100%;
 
   font-weight: normal;
   font-size: 14px;
