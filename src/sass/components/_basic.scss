@@ -1,0 +1,71 @@
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    margin-right: auto;
+    margin-left: auto;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.86;
+    
+    letter-spacing: 0.02em;
+  
+    color: $basic;
+}
+
+.container {  
+    padding-right: 31px;
+    padding-left: 31px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $mobile-upper) {
+        padding-right: 39px;
+        padding-left: 39px;
+    }
+
+    @media screen and (min-width: $table-upper) {
+        padding-right: 55px;
+        padding-left: 55px;
+    }
+}
+
+img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+
+    color: $white-item;
+}
+
+h2 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+
+    color: $basic-item;
+}
