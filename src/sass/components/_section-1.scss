@@ -134,6 +134,8 @@ p {
   margin-top: 40px;
   width: 160px;
   height: 40px;
+  text-align: center;
+  padding-top: 12px;
   font-family: Open Sans;
 
   font-weight: 600;
@@ -142,9 +144,9 @@ p {
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
-  color: #3b1717;
+  // color: #3b1717;
   border: 1px solid #ff6c00;
-  background-color: #ffffff;
+  // background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 25px;
 
@@ -161,6 +163,23 @@ p {
   @media screen and (min-width: 1200px) {
     margin-left: 64px;
   }
+}
+
+.text-button {
+  // margin-top: 40px;
+  // width: 160px;
+  // height: 40px;
+  // text-align: center;
+  // padding-top: 12px;
+  // font-family: Open Sans;
+
+  // font-weight: 600;
+  // font-size: 12px;
+  // line-height: 1.33;
+  // letter-spacing: 0.09em;
+  // text-transform: uppercase;
+
+  // color: $basic-item;
 }
 
 .photo-tablet {
