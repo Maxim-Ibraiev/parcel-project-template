@@ -3,7 +3,7 @@
 .hero {
     position: relative;
     
-    // width: 100%;
+    max-width: 1125px;
     height: 550px;
 
     padding-left: 31px; 
@@ -25,12 +25,12 @@
     }
 
     @media screen and (min-width: $mobile-upper) {
+        margin-left: 159px;
+        padding-left: 24px; 
 
         background-image: url(/images/header-609.jpg);
         background-repeat: no-repeat;
         background-size: 100%, 680px;
-        // background-position: 0 0;
-        margin-left: 159px;
 
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
@@ -40,6 +40,9 @@
     }
 
     @media screen and (min-width: $table-upper) {
+        margin-left: 155px;
+        padding-left: 40px; 
+
         background-image: url(/images/header-1125.jpg);
         background-repeat: no-repeat;
 
@@ -60,6 +63,15 @@
 
     top: 40px;
     left: 31px;
+
+    @media screen and (min-width: $mobile-upper) {
+        top: 32px;
+        left: -109px;
+    }
+
+    @media screen and (min-width: $table-upper) {
+        left: -99px;
+    }
 }
 
 // menu
@@ -72,7 +84,8 @@
 
     letter-spacing: 0.1em;
 
-    a {
+    .hero-nav a,
+    .contacts a {
         color: $white-item;
     }
 
@@ -96,9 +109,9 @@
 
         // list
         a,
-        a:visited {
+        a:visited,
+        .contacts a {
             display: block;
-            text-decoration: none;
 
             color: $basic-item;
         }
@@ -110,6 +123,7 @@
         
         li:last-child,
         .hero-button {
+            width: 194px;
             margin-bottom: 64px;
         }
 
@@ -156,8 +170,6 @@ a:hover {
     .hero-nav {
         display: flex;
 
-        padding-left: 24px;
-
         li:not(:last-child) {
             margin-right: 24px;
         }
@@ -171,13 +183,53 @@ a:hover {
     }
 
     .contacts {
-        display: flex;
-        flex-direction: column-reverse;
+        margin-left: 322px;
 
-        margin-left: 50px;
+        @media screen and (max-width: $table-lesser) {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            margin-left: 50px;
+            
+            a:first-child {
+                margin-top: 10px;
+            }
+        }
+
+        @media screen and (min-width: $table-upper) {
+            a:not(:first-child) {
+                margin-left: 40px;
+            }
+        }
     }
     .social-link {
-        display: none;
+        display: block;
+        
+        position: absolute;    
+        bottom: 40px;
+        left: -83px;
+
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(0.5turn);
+
+        @media screen and (min-width: $table-upper) {
+        left: -73px;
+        }
+        
+        .hero-instagram {
+            margin-bottom: 40px;
+        }
+
+        .hero-instagram::before {
+            height: 60px;
+            width: 1px;
+
+            margin-bottom: 0;
+            margin-right: 0.3em;
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -231,6 +283,18 @@ body.is-open {
     width: 100%;
     
     padding-top: 208px;
+
+    @media screen and (min-width: $mobile-upper) {
+        padding-top: 156px;
+        padding-left: 96px;
+        
+    }
+
+    @media screen and (min-width: $table-upper) {
+        padding-top: 184px;
+        padding-left: 60px;
+        
+    }
 }
 
 .hero-sub-title {
