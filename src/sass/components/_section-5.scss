@@ -1,14 +1,15 @@
 .galery {
   padding-top: 84px;
   padding-bottom: 84px;
-  background-color: #f7f7f7;
 
-  @media screen and (max-width: 1279px) and (min-width: 768px) {
+  background-color: white;
+
+  @media screen and (max-width: $table-lesser) and (min-width: $mobile-upper) {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $table-upper) {
     padding-top: 130px;
     padding-bottom: 130px;
   }
@@ -23,43 +24,60 @@
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #303030;
-  margin-bottom: 20px;
+  color: $basic-item;
+  margin-bottom: 44px;
 }
 
 .galery-title::before {
   content: '';
   width: 60px;
   height: 1px;
-  background-color: #303030;
+  background-color: $basic-item;
   margin-right: 20px;
 }
 
-.galery-set {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  justify-content: center;
+.galery-list {
+  margin: -15px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $mobile-upper) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-.galery-set__item {
-  @media screen and (max-width: 767px) {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-  }
+.galery-item {
+  margin: 15px;
+  width: calc(100%-60px);
 
-  @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 4 * 5) / 2);
-    margin: 30px;
+  @media screen and (min-width: $mobile-upper) {
+    width: calc((100% - 4 * 15) / 2);
   }
-
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 8 * 5) / 4);
+  @media screen and (min-width: $table-upper) {
+    width: calc((100% - 8 * 5) / 4);
   }
 }
+
+// .galery-list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin: -30px;
+// }
+
+// .galery-list__item {
+//   margin: 30px;
+//   width: calc(100% - 60px);
+
+//   @media screen and (min-width: 768px) {
+//     width: calc((100% - 4 * 15) / 2);
+//   }
+
+//   @media screen and (min-width: 767px) {
+//     &:not(:last-child) {
+//       margin-bottom: 30px;
+//     }
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     width: calc((100% - 8 * 5) / 4);
+//   }
+// }
