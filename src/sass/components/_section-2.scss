@@ -6,7 +6,7 @@
 
 .section-pricelist {
   max-width: 1280px;
-  background-image: url('../images/section-price/bg-price-mobile.png'),
+  background-image: url('../images/section-price/price-480.png'),
     linear-gradient(#111319, #111319);
   background-repeat: no-repeat;
   background-position: center;
@@ -16,14 +16,14 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     & {
-      background-image: url('../images/section-price/bg-price-mobile@2x.png'),
+      background-image: url('../images/section-price/price-960@2x.png'),
         linear-gradient(#111319, #111319);
     }
   }
 
   @media screen and (min-width: 577px) {
     & {
-      background-image: url('../images/section-price/bg-price-tablet.png'),
+      background-image: url('../images/section-price/price-768.png'),
         linear-gradient(#111319, #111319);
     }
 
@@ -31,7 +31,7 @@
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       & {
-        background-image: url('../images/section-price/bg-price-tablet@2x.png'),
+        background-image: url('../images/section-price/price-1536@2x.png'),
           linear-gradient(#111319, #111319);
       }
     }
@@ -39,7 +39,7 @@
 
   @media screen and (min-width: 769px) {
     & {
-      background-image: url('../images/section-price/bg-price-desktop.png'),
+      background-image: url('../images/section-price/price-1280.png'),
         linear-gradient(#111319, #111319);
     }
 
@@ -47,7 +47,7 @@
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       & {
-        background-image: url('../images/section-price/bg-price-desktop@2x.png'),
+        background-image: url('../images/section-price/price-2560@2x.png'),
           linear-gradient(#111319, #111319);
       }
     }
