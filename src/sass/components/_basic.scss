@@ -26,81 +26,85 @@
   }
 }
 
+:root {
+  box-sizing: border-box;
+}
+
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 body {
-    margin-right: auto;
-    margin-left: auto;
-    
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.86;
-    
-    letter-spacing: 0.02em;
-  
-    color: $basic;
+  margin-right: auto;
+  margin-left: auto;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.86;
+
+  letter-spacing: 0.02em;
+
+  color: $basic;
 }
 
-.container {  
-    padding-right: 31px;
-    padding-left: 31px;
-    margin-left: auto;
-    margin-right: auto;
+.container {
+  padding-right: 31px;
+  padding-left: 31px;
+  margin-left: auto;
+  margin-right: auto;
 
-    @media screen and (min-width: $mobile-upper) {
-      padding-right: 39px;
-      padding-left: 39px;
-    }
+  @media screen and (min-width: $mobile-upper) {
+    padding-right: 39px;
+    padding-left: 39px;
+  }
 
-    @media screen and (min-width: $table-upper) {
-        padding-right: 55px;
-        padding-left: 55px;
-    }
+  @media screen and (min-width: $table-upper) {
+    padding-right: 55px;
+    padding-left: 55px;
+  }
 }
 
 img {
-    display: block;
+  display: block;
 
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 1.16;
-    letter-spacing: 0.05em;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
 
-    color: $white-item;
+  color: $white-item;
 }
 
 h2 {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 42px;
-    line-height: 49px;
-    letter-spacing: 0.05em;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
 
-    color: $basic-item;
+  color: $basic-item;
 }
 
 .long-line {
-  &::before{
-    content: "";
+  &::before {
+    content: '';
     display: inline-block;
     margin-bottom: 0.3em;
     margin-right: 20px;
@@ -108,4 +112,10 @@ h2 {
     height: 1px;
     background: rgba(157, 164, 189, 0.6);
   }
+}
+
+a {
+  color: $basic-item;
+
+  text-decoration: none;
 }
