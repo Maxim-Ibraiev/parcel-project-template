@@ -8,23 +8,26 @@ p {
 }
 
 .masters {
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // margin-left: auto;
+  // margin-right: auto;
   padding-top: 84px;
   padding-bottom: 84px;
   background-color: #f7f7f7;
-  width: 418px;
+  // width: 418px;
 
   @media screen and (min-width: $mobile-upper) and (max-width: $table-lesser) {
     padding-top: 100px;
     padding-bottom: 100px;
-    width: 450px;
+    // width: 450px;
   }
 
   @media screen and (min-width: $table-upper) {
     padding-top: 130px;
     padding-bottom: 130px;
-    width: 1170px;
+    // width: 1170px;
   }
 }
 
