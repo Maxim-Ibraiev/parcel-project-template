@@ -27,6 +27,7 @@
 
         background-image: url(/images/header-609.jpg);
         background-repeat: no-repeat;
+        margin-left: 159px;
 
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
@@ -47,8 +48,6 @@
     }
 
     .container {
-        max-width: 306px;
-
         margin-left: 0;
     }
 }
@@ -72,12 +71,15 @@
     position: absolute;
     right: 0;
 
+    width: 70%;
+    height: 796px;
+
+    background-attachment: scroll;
+
     padding-top: 118px;
     padding-left: 40px;
 
     background: #fff;
-    width: 70%;
-    height: 100%;
 
     color: $basic-item;
     font-weight: 600;
@@ -89,6 +91,14 @@
     a:active,
     a:hover {
         color: $accent;
+    }
+
+    .hero-instagram {
+        @extend .long-line;
+    }
+
+    .hero-youtube {
+        margin-left: 80px;
     }
 
     .hero-instagram,
@@ -117,24 +127,20 @@
     }
 }
 
-
-
 .is-open {
     display: block;
 }
 
-// button
-.button-menu .icon-close {
-    display: none;
-}
-
-.button-menu.is-open .icon-close {
-    display: block;
-}
-
-.button-menu.is-open body {
+.backdrop.is-open{
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2) );
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     overflow: hidden;
 }
+
+// button
 
 .button-menu {
     position: absolute;
@@ -147,13 +153,36 @@
     background: none;
     border: none;
 
+    @media screen and (min-width: $mobile-upper){
+        display: none;
+    }
+
     svg {
         height: 40px;
         width: 40px;
     }
 }
 
+.button-menu .icon-close {
+    display: none;
+}
+
+.button-menu.is-open .icon-close {
+    display: block;
+}
+
+body.is-open {
+    overflow: hidden;
+    .manu {
+        overflow: visible;
+    }
+}
+
+// description
+
 .hero-description {
+    width: 100%;
+    
     padding-top: 208px;
 }
 
@@ -163,9 +192,15 @@
     text-transform: uppercase;
     font-size: 11px;
     line-height: 1.36;
+
+    @extend .long-line;
 }
 
 .hero-des-title {
+    display: inline-block;
+
+    width: 306px;
+
     color: $basic-white;
     
     font-size: 16px;
