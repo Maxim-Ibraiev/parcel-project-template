@@ -1,3 +1,31 @@
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  text-decoration: none;
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #303030;
+  cursor: pointer;
+
+  &.secondary {
+    color: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    background: #ff6c00;
+    color: #ffffff;
+  }
+}
+
 *::before,
 *::after {
   box-sizing: inherit;
@@ -67,9 +95,11 @@ h2 {
   line-height: 49px;
   letter-spacing: 0.05em;
 
+
   color: $basic-item;
 }
 
 a {
   text-decoration: none;
+    color: $basic-item;
 }
