@@ -14,7 +14,6 @@
   text-align: center;
   color: $basic-item;
   cursor: pointer;
-
   &.secondary {
     color: $white-item;
   }
@@ -54,6 +53,8 @@ body {
   letter-spacing: 0.02em;
 
   color: $basic;
+
+  
 }
 
 .container {
@@ -111,6 +112,26 @@ h2 {
   letter-spacing: 0.05em;
 
   color: $basic-item;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 160px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #ff6c00;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .long-line {

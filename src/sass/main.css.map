@@ -5,6 +5,7 @@
         "main.scss",
         "utils/_normalize.scss",
         "utils/_variables.scss",
+        "components/_basic.scss",
         "components/_header.scss",
         "components/_section-1.scss",
         "components/_section-2.scss",
