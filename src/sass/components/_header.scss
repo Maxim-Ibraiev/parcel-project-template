@@ -92,7 +92,7 @@
     letter-spacing: 0.1em;
 
     .hero-nav a,
-    .contacts a {
+    .hero-contacts a {
         color: $white-item;
     }
 
@@ -127,7 +127,7 @@
         // list
         a,
         a:visited,
-        .contacts a {
+        .hero-contacts a {
             display: block;
 
             color: $basic-item;
@@ -203,7 +203,7 @@ a:hover {
 
     }
 
-    .contacts {
+    .hero-contacts {
         margin-left: 322px;
 
         @media screen and (max-width: $table-lesser) {
