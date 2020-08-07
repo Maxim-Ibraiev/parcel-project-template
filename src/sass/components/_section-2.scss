@@ -6,8 +6,7 @@
 
 .section-pricelist {
   max-width: 1280px;
-  background: #111319;
-  background-image: url('../images/section-price/bg-price-mobile.png'),
+  background-image: url('../images/section-price/price-480.png'),
     linear-gradient(#111319, #111319);
   background-repeat: no-repeat;
   background-position: center;
@@ -17,14 +16,14 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     & {
-      background-image: url('../images/section-price/bg-price-mobile@2x.png'),
+      background-image: url('../images/section-price/price-960@2x.png'),
         linear-gradient(#111319, #111319);
     }
   }
 
   @media screen and (min-width: 577px) {
     & {
-      background-image: url('../images/section-price/bg-price-tablet.png'),
+      background-image: url('../images/section-price/price-768.png'),
         linear-gradient(#111319, #111319);
     }
 
@@ -32,7 +31,7 @@
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       & {
-        background-image: url('../images/section-price/bg-price-tablet@2x.png'),
+        background-image: url('../images/section-price/price-1536@2x.png'),
           linear-gradient(#111319, #111319);
       }
     }
@@ -40,7 +39,7 @@
 
   @media screen and (min-width: 769px) {
     & {
-      background-image: url('../images/section-price/bg-price-desktop.png'),
+      background-image: url('../images/section-price/price-1280.png'),
         linear-gradient(#111319, #111319);
     }
 
@@ -48,7 +47,7 @@
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       & {
-        background-image: url('../images/section-price/bg-price-desktop@2x.png'),
+        background-image: url('../images/section-price/price-2560@2x.png'),
           linear-gradient(#111319, #111319);
       }
     }
@@ -60,8 +59,6 @@
   margin-left: auto;
   padding: 84px 31px;
 
-  font-family: Open Sans;
-  font-style: normal;
   text-align: center;
 
   @media screen and (min-width: 480px) {
@@ -92,7 +89,7 @@
   text-transform: uppercase;
   text-align: left;
 
-  color: rgba(157, 164, 189, 0.6);
+  color: $white-sub-item;
 
   &::before {
     content: '';
@@ -101,7 +98,7 @@
     margin-right: 20px;
     width: 60px;
     height: 1px;
-    background: rgba(157, 164, 189, 0.6);
+    background: $white-sub-item;
   }
 }
 
@@ -115,33 +112,62 @@
   letter-spacing: 0.05em;
   text-align: left;
 
-  color: #ffffff;
+  color: $white-item;
 }
 
 .pricelist-box {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 50px;
+  padding: 30px;
 
   font-weight: normal;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 2.14;
   letter-spacing: 0.02em;
 
-  color: #9da4bd;
+  color: $basic-white;
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+  @media screen and (min-width: $mobile-upper) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    padding: 0;
+  }
 }
 
 .pricelist-list {
   list-style: none;
   margin: 0;
-  padding: 30px;
+}
+
+.pricelist-list.left {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    padding: 30px;
+    flex-grow: 1;
+  }
+}
+
+.pricelist-list.right {
+  @media screen and (min-width: 1200px) {
+    padding: 30px;
+    flex-grow: 1;
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
 .pricelist-item {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  & + & {
+    margin-top: 20px;
+  }
 }
 
 .line {
@@ -153,32 +179,4 @@
 
   height: 1px;
   background: rgba(157, 164, 189, 0.12);
-}
-
-.button {
-  display: inline-block;
-  padding: 12px 20px;
-  text-decoration: none;
-
-  border: 1px solid #ff6c00;
-  border-radius: 25px;
-
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  text-align: center;
-  color: #303030;
-  cursor: pointer;
-
-  &.secondary {
-    color: #ffffff;
-  }
-
-  &:hover,
-  &:focus {
-    background: #ff6c00;
-    color: #ffffff;
-  }
 }

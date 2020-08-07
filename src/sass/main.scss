@@ -4,8 +4,10 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './utils/normalize';
+
 @import './utils/variables';
+@import './utils/normalize';
+@import './components/basic';
 
 @import './components/basic';
 @import './components/header';
