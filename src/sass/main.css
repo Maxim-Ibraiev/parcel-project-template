@@ -1019,7 +1019,27 @@ p {
   background-color: #ffffff;
 }
 
-.container.feature .subtitle {
+@media screen and (min-width: 768px) {
+  .container.feature {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container.feature {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.container.feature .sub-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1037,7 +1057,7 @@ p {
   color: basic-item;
 }
 
-.container.feature .subtitle::before {
+.container.feature .sub-title::before {
   content: '';
   display: inline-block;
   -webkit-box-align: center;
@@ -1049,20 +1069,46 @@ p {
   background: #303030;
 }
 
-.container.feature .title {
-  margin-bottom: 20px;
+@media screen and (min-width: 480px) {
+  .container.feature .title-box {
+    width: 480px;
+  }
 }
 
-.container.feature .feature-text {
+@media screen and (min-width: 768px) {
+  .container.feature .title-box {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.container.feature .title-box .text {
   margin-bottom: 44px;
   font-weight: normal;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-  color: basic;
+  color: #555555;
 }
 
-.container.feature .feature-list {
+.container.feature .title-box .feature-title {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .container.feature .feature-box {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container.feature .feature-box {
+    margin-left: auto;
+    margin-right: 133px;
+  }
+}
+
+.container.feature .feature-box .feature-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1071,7 +1117,7 @@ p {
   margin: -15px;
 }
 
-.container.feature .feature-list .item {
+.container.feature .feature-box .feature-list .item {
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1088,7 +1134,7 @@ p {
   margin: 15px;
 }
 
-.container.feature .feature-list .item .number {
+.container.feature .feature-box .feature-list .item .number {
   margin-bottom: 6px;
   font-weight: 700;
   font-size: 42px;
@@ -1098,7 +1144,7 @@ p {
   color: #303030;
 }
 
-.container.feature .feature-list .item .sup {
+.container.feature .feature-box .feature-list .item .sup {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.37;
@@ -1107,7 +1153,7 @@ p {
   vertical-align: top;
 }
 
-.container.feature .feature-list .item .text {
+.container.feature .feature-box .feature-list .item .feature-text {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
