@@ -4,10 +4,21 @@
 }
 
 .container.feature {
-    background-color: $white-item; 
+    background-color: $white-item;
+    @media screen and (min-width:768px) {
+        display: block;
+    }
 
-       
-    .subtitle {
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+    }
+    
+     
+    
+
+    .sub-title {
             display: flex;
             align-items: center;
             margin-top: 0;
@@ -32,29 +43,51 @@
             background: $basic-item;
         }
     }
-
-    .title {
-        margin-bottom: 20px;
+    .title-box {
+        @media screen and (min-width: 480px){
+        width: 480px;
+        }
+        @media screen and (min-width: 768px){
+        margin-left: 0;
+        margin-right: auto;
+        }
+        
+        .text {
+            margin-bottom: 44px;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 1.67;
+            letter-spacing: 0.02em;
+    
+            color: $basic;
+        }
+         .feature-title {
+            margin-bottom: 20px;
+        }
     }
 
-    .feature-text {
-        margin-bottom: 44px;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 1.67;
-        letter-spacing: 0.02em;
-
-        color: basic;
-    }
-
+    
+    .feature-box {
+        @media screen and (min-width: 480px){
+            width: 480px;
+        }
+        @media screen and (min-width:768px) {
+            
+            margin-left: auto;
+            margin-right: 133px;
+        }
+        @media screen and (min-width:1200px) {
+           
+        }
+    
       
     .feature-list {
 
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
-     
-    .item {
+
+        .item {
         padding: 20px;
         
         display: flex;
@@ -65,6 +98,7 @@
         width: calc((100% - 2 * 30px) / 2);
         margin: 15px;
 
+       
         .number {
             
             margin-bottom: 6px;
@@ -85,7 +119,7 @@
             vertical-align: top;
         }
 
-        .text {
+        .feature-text {
          
             font-weight: 600;
             font-size: 11px;
@@ -93,9 +127,10 @@
             text-align: center;
             color: $basic-item;
         }
-
+        
       
     }
-}
+    }
+    }
     
 }
