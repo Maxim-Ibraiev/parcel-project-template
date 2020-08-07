@@ -1,62 +1,118 @@
-// }
-*,
-*::before,
-*::after {
+.link-button {
+  display: inline-block;
+  padding: 12px 20px;
+  text-decoration: none;
+
+  border: 1px solid $accent;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $basic-item;
+  cursor: pointer;
+  &.secondary {
+    color: $white-item;
+  }
+
+  &:hover,
+  &:focus {
+    background: $accent;
+    color: $white-item;
+  }
+}
+
+:root {
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
+*::before,
+*::after {
+  box-sizing: inherit;
 }
-ul,
-ol {
-  list-style-type: none;
+
+ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 body {
+  margin-right: auto;
+  margin-left: auto;
+
   font-family: Open Sans;
   font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 15px;
-  /* identical to box height */
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.86;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.02em;
+
+  color: $basic;
 }
 
 .container {
-  width: 100%;
+  padding-right: 31px;
+  padding-left: 31px;
   margin-left: auto;
   margin-right: auto;
-  // max-width: 767px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $mobile-upper) {
+    padding-right: 39px;
+    padding-left: 39px;
+    max-width: $mobile-upper;
   }
-  @media screen and (min-width: 1280px) {
-    // max-width: 1280px;
+
+  @media screen and (min-width: $table-upper) {
+    padding-right: 55px;
+    padding-left: 55px;
+    max-width: $table-upper;
   }
 }
-.footer-title {
-  width: 100%;
-  // font-family: Raleway;
+
+img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: $white-item;
+}
+
+h2 {
+  font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 42px;
   line-height: 49px;
-  text-align: center;
   letter-spacing: 0.05em;
-  margin: 54px 0 40px 0;
 
-  @media screen and (min-width: 768px) {
-    text-align: left;
-    max-width: 1279px;
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 1280px;
-  }
+  color: $basic-item;
 }
+
 .button {
   display: flex;
   align-items: center;
@@ -75,4 +131,21 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.long-line {
+  &::before {
+    content: '';
+    display: inline-block;
+    margin-bottom: 0.3em;
+    margin-right: 20px;
+    width: 60px;
+    height: 1px;
+    background: rgba(157, 164, 189, 0.6);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $basic-item;
 }
