@@ -50,34 +50,9 @@
   width: calc(100%-60px);
 
   @media screen and (min-width: $mobile-upper) {
-    width: calc((100% - 4 * 15) / 2);
+    width: calc((100% - 4 * 15px) / 2);
   }
   @media screen and (min-width: $table-upper) {
-    width: calc((100% - 8 * 5) / 4);
+    width: calc((100% - 8 * 5px) / 4);
   }
 }
-
-// .galery-list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin: -30px;
-// }
-
-// .galery-list__item {
-//   margin: 30px;
-//   width: calc(100% - 60px);
-
-//   @media screen and (min-width: 768px) {
-//     width: calc((100% - 4 * 15) / 2);
-//   }
-
-//   @media screen and (min-width: 767px) {
-//     &:not(:last-child) {
-//       margin-bottom: 30px;
-//     }
-//   }
-
-//   @media screen and (min-width: 1200px) {
-//     width: calc((100% - 8 * 5) / 4);
-//   }
-// }
