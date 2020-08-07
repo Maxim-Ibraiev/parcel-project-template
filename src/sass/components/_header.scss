@@ -8,34 +8,32 @@
 
     padding-left: 31px; 
     
-    background-image: url(/images/header-480.jpg);
+    background-image: url(/images/header/header-1-480.jpg);
     background-repeat: no-repeat;
     background-size: cover, 100%;
     background-position: center;
     object-fit: fill;
 
-    @media screen and (min-width: 480px) {
-        background-image: url(/images/header-960@2x.jpg);
-    }
-
     @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url(/images/header-960@2x.jpg);
+        background-image: url(/images/header/header-1-960@2x.jpg);
     }
 
     @media screen and (min-width: $mobile-upper) {
+        height: 680px;
+        
         margin-left: 159px;
         padding-left: 24px; 
 
-        background-image: url(/images/header-609.jpg);
+        background-image: url(/images/header/header-1-609.jpg);
         background-repeat: no-repeat;
         background-size: 100%, 680px;
 
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
-            background-image: url(/images/header-1218@2x.jpg);
+            background-image: url(/images/header/header-1-1218@2x.jpg);
         }
     }
 
@@ -43,13 +41,13 @@
         margin-left: 155px;
         padding-left: 40px; 
 
-        background-image: url(/images/header-1125.jpg);
+        background-image: url(/images/header/header-1-1125.jpg);
         background-repeat: no-repeat;
 
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
-            background-image: url(/images/header-2250@2x.jpg);
+            background-image: url(/images/header/header-1-2250@2x.jpg);
         }
     }
 }
@@ -107,6 +105,16 @@
         font-size: 18px;
         line-height: 1.39;
 
+        + .menu-backdrop {
+            position: absolute;
+            left: 0;
+
+            width: 30%;
+            height: 796px;
+            background: rgba(25, 28, 38, 0.2);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+        }
+
         // list
         a,
         a:visited,
@@ -131,6 +139,10 @@
             margin-left: 80px;
         }
     }
+}
+
+.menu-over {
+    overflow: hidden;
 }
 
 a:active,
@@ -311,5 +323,3 @@ body.is-open {
     font-size: 16px;
     line-height: 1.32;
 }
-
-  
