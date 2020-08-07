@@ -1,0 +1,101 @@
+.section {
+    margin-top: 84px;
+    margin-bottom: 84px;
+}
+
+.container.feature {
+    background-color: $white-item; 
+
+       
+    .subtitle {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+          
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 1.36;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: left;
+          
+            color: basic-item;
+          
+        &::before {
+            content: '';
+            display: inline-block;
+            align-items: center;
+            margin-right: 20px;
+            width: 60px;
+            height: 1px;
+            background: $basic-item;
+        }
+    }
+
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .feature-text {
+        margin-bottom: 44px;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 1.67;
+        letter-spacing: 0.02em;
+
+        color: basic;
+    }
+
+      
+    .feature-list {
+
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+     
+    .item {
+        padding: 20px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:#F7F7F7;
+        text-align: center;
+        width: calc((100% - 2 * 30px) / 2);
+        margin: 15px;
+
+        .number {
+            
+            margin-bottom: 6px;
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 1.36;
+            text-align: center;
+            letter-spacing: 0.05em;
+
+            color: $basic-item;
+        }
+        .sup {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.37;
+            color: $accent;
+            position: static;
+            vertical-align: top;
+        }
+
+        .text {
+         
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 1.36;
+            text-align: center;
+            color: $basic-item;
+        }
+
+      
+    }
+}
+    
+}
