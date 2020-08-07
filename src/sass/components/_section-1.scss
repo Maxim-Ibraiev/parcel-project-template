@@ -144,7 +144,7 @@ p {
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
-  // color: #3b1717;
+  color: $basic-item;
   border: 1px solid $accent;
   // background-color: #ffffff;
   box-sizing: border-box;
@@ -153,7 +153,6 @@ p {
   &:hover,
   &:focus {
     background: $accent;
-    color: $white-item;
   }
 
   @media screen and (min-width: $mobile-upper) {
@@ -162,6 +161,15 @@ p {
 
   @media screen and (min-width: $table-upper) {
     margin-left: 64px;
+  }
+
+  a {
+    color: $basic-item;
+
+    &:hover,
+    &:focus {
+      color: $white-item;
+    }
   }
 }
 
