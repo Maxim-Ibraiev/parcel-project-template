@@ -1,9 +1,9 @@
-.button {
+.link-button {
   display: inline-block;
   padding: 12px 20px;
   text-decoration: none;
 
-  border: 1px solid #e0d7d0;
+  border: 1px solid $accent;
   border-radius: 25px;
 
   font-weight: 600;
@@ -12,17 +12,21 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   text-align: center;
-  color: #303030;
+  color: $basic-item;
   cursor: pointer;
   &.secondary {
-    color: #ffffff;
+    color: $white-item;
   }
 
   &:hover,
   &:focus {
-    background: #ff6c00;
-    color: #ffffff;
+    background: $accent;
+    color: $white-item;
   }
+}
+
+:root {
+  box-sizing: border-box;
 }
 
 *::before,
@@ -60,11 +64,13 @@ body {
   @media screen and (min-width: $mobile-upper) {
     padding-right: 39px;
     padding-left: 39px;
+    max-width: $mobile-upper;
   }
 
   @media screen and (min-width: $table-upper) {
     padding-right: 55px;
     padding-left: 55px;
+    max-width: $table-upper;
   }
 }
 
@@ -73,6 +79,16 @@ img {
 
   max-width: 100%;
   height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -95,6 +111,18 @@ h2 {
   letter-spacing: 0.05em;
 
   color: $basic-item;
+}
+
+.long-line {
+  &::before {
+    content: '';
+    display: inline-block;
+    margin-bottom: 0.3em;
+    margin-right: 20px;
+    width: 60px;
+    height: 1px;
+    background: rgba(157, 164, 189, 0.6);
+  }
 }
 
 a {
