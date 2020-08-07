@@ -12,7 +12,7 @@ p {
   margin-right: auto;
 
   @media screen and (max-width: $mobile-lesser) {
-    width: 418px;
+    max-width: 418px;
 
     padding-top: 84px;
 
