@@ -37,8 +37,6 @@
 }
 
 .galery-list {
-  margin: -15px;
-
   @media screen and (min-width: $mobile-upper) {
     display: flex;
     flex-wrap: wrap;
@@ -48,6 +46,9 @@
 .galery-item {
   margin: 15px;
   width: calc(100%-60px);
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media screen and (min-width: $mobile-upper) {
     width: calc((100% - 4 * 15px) / 2);
