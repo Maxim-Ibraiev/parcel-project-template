@@ -1,20 +1,27 @@
 .section {
     margin-top: 84px;
     margin-bottom: 119px;
-}
+    }
 
 .container.feature {
-
-    background-color: $white-item;
     
-    @media screen and (min-width:768px) {
+    background-color: $white-item;
+
+   
+      
+    @media screen and (min-width: 768px) {
+        
         display: block;
+        
+     
     }
 
     @media screen and (min-width:1200px) {
+       
         display: flex;
         flex-wrap: wrap;
         flex-direction: row-reverse;
+
     }
     
     .sub-title {
@@ -44,26 +51,36 @@
         }
 
         .title-box {
-        @media screen and (min-width: 480px){
-        width: 480px;
-        }
-        @media screen and (min-width: 768px){
-        margin-left: 0;
-        margin-right: auto;
-        }
+            @media screen and (min-width: 480px){
+                width: 480px;
+            }
+            
+            @media screen and (min-width: 768px) {
+
+                margin-left: 0;
+                margin-right: auto;
+             
+            } 
+            @media screen and (min-width:1200px) {
+       
+                margin: 0;
+                
         
-        .text {
-            margin-bottom: 44px;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 1.67;
-            letter-spacing: 0.02em;
+            }
+
+            .text {
+                margin-bottom: 44px;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 1.67;
+                letter-spacing: 0.02em;
     
-            color: $basic;
-        }
-         .feature-title {
-            margin-bottom: 20px;
-        }
+                color: $basic;
+            }
+
+            .feature-title {
+                margin-bottom: 20px;
+            }
         }
 
     
@@ -71,20 +88,28 @@
         @media screen and (min-width: 480px){
             width: 480px;
         }
+
         @media screen and (min-width:768px) {
             
             margin-left: auto;
-            margin-right: 133px;
+            margin-right: 0px;
         }
-        
+        @media screen and (min-width:1200px) {
+       
+            margin-left: auto;
+            margin-right: 133px;
+            
     
-      
+        }
+
+        margin: -15px;
+     
     .feature-list {
 
         display: flex;
         flex-wrap: wrap;
-        margin: -15px;
-
+       
+        
         .item:nth-child(2n) {
             transform: translateY(30px);
           }
@@ -100,8 +125,6 @@
         
         width: calc((100% - 2 * 30px) / 2);
         margin: 15px;
-
-        
 
         .number {
             
