@@ -127,14 +127,17 @@ footer {
     position: absolute;
     left: 0;
     top: 0;
+    transition: 300ms ease;
   }
   &-item:focus &-label,
   &-item:hover &-label {
     top: -20px;
+    transition: 300ms ease;
   }
   &-input:not(:placeholder-shown) ~ &-label {
     top: -20px;
     color: white;
+    transition: 300ms ease;
   }
   &-input:focus-within,
   &-input:not(:focus-within) {
@@ -147,6 +150,7 @@ footer {
     line-height: 15px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    transition: 300ms ease;
   }
   &-input:focus-within ~ &-label {
     //   &-input:not(:focus-within) ~ &-label {
@@ -154,7 +158,13 @@ footer {
   }
 }
 .button-footer {
+  display: flex;
   margin: 0;
+  justify-content: center;
+  background-color: #191c26;
+  color: white;
+  cursor: pointer;
+  transition: 300ms ease;
 }
 .button-wrapper {
   display: flex;
@@ -168,31 +178,30 @@ footer {
   }
   @media screen and (min-width: 1280px) {
   }
+  &-hover .button-footer,
+  &-focus .button-footer {
+    background-color: $accent;
+    transition: 300ms ease;
+  }
 }
-// .back {
-//   width: 100%;
-//   min-height: 496px;
-//   max-height: 100%;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   // background-image: url(../../images/footer/back_footer.jpg);
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   opacity: 0.1;
-//   overflow: hidden;
-//   @media screen and (min-width: 480px) {
-//     background-size: cover;
-//     background-position: center;
-//   }
-//   @media screen and (min-width: 768px) {
-//   }
-//   @media screen and (min-width: 1280px) {
-//   }
-// }
+.back {
+  width: 100%;
+  // min-height: 496px;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  // overflow: hidden;
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1280px) {
+  }
+}
 .contacts {
   display: block;
-
   width: 100%;
   min-height: 496px;
   z-index: 10;
@@ -201,14 +210,17 @@ footer {
   background-position: center;
   padding-top: 84px;
   padding-bottom: 84px;
-
+  // background: url(../../images/footer_contacts_back.jpg);
   @media screen and (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 100px;
+    margin: 0;
+    // background-image: url(../../images/header-480.jpg);
   }
   @media screen and (min-width: 1280px) {
     width: 50%;
     padding-top: 124px;
+    padding-bottom: 100px;
   }
   &-title {
     margin-bottom: 44px;
@@ -219,7 +231,6 @@ footer {
     line-height: 49px;
     text-align: center;
     letter-spacing: 0.05em;
-    // margin-left: 0;
   }
   &-inner {
     position: absolute;
@@ -241,6 +252,13 @@ footer {
   line-height: 15px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-top: 10px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 70px;
+  }
 }
 .contacts-list {
   color: #9da4bd;
@@ -299,8 +317,21 @@ footer {
   }
 }
 .copyright-container {
+  // padding-right: 31px;
+  // padding-left: 31px;
+  // margin-left: auto;
+  // margin-right: auto;
   padding-left: 0;
   padding-right: 0;
+  width: 100%;
+
+  // @media screen and (min-width: $mobile-upper) {
+  // }
+
+  // @media screen and (min-width: $table-upper) {
+  //   padding-right: 55px;
+  //   padding-left: 55px;
+  // }
 }
 .copyright {
   display: flex;
@@ -358,6 +389,15 @@ footer {
 }
 .work-inner-line:before {
   background-color: #9da4bd;
+}
+.work-inner-line {
+  margin-top: 10px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 70px;
+  }
 }
 .copyright-inner-line::before {
   background-color: black;
