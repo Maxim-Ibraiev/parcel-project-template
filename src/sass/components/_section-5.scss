@@ -18,6 +18,16 @@
   }
 }
 
+.galery .container {
+  @media screen and (min-width: $mobile-upper) {
+    max-width: $mobile-upper;
+  }
+
+  @media screen and (min-width: $table-upper) {
+    max-width: $table-upper;
+  }
+}
+
 .galery-title {
   display: inline-flex;
   align-items: center;
