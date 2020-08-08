@@ -1,4 +1,7 @@
 .section-pricelist {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $table-upper;
   background-image: url('../images/section-price/price-480.png'),
     linear-gradient(#111319, #111319);
   background-repeat: no-repeat;
