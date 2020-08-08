@@ -1082,6 +1082,12 @@ p {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container.feature .title-box {
+    margin: 0;
+  }
+}
+
 .container.feature .title-box .text {
   margin-bottom: 44px;
   font-weight: normal;
@@ -1095,6 +1101,10 @@ p {
   margin-bottom: 20px;
 }
 
+.container.feature .feature-box {
+  margin: -15px;
+}
+
 @media screen and (min-width: 480px) {
   .container.feature .feature-box {
     width: 480px;
@@ -1102,6 +1112,13 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+  .container.feature .feature-box {
+    margin-left: auto;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .container.feature .feature-box {
     margin-left: auto;
     margin-right: 133px;
@@ -1114,7 +1131,6 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: -15px;
 }
 
 .container.feature .feature-box .feature-list .item:nth-child(2n) {
