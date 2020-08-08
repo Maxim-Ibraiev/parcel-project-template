@@ -184,27 +184,22 @@ footer {
     transition: 300ms ease;
   }
 }
-// .back {
-//   width: 100%;
-//   min-height: 496px;
-//   max-height: 100%;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   // background-image: url(../../images/footer/back_footer.jpg);
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   opacity: 0.1;
-//   overflow: hidden;
-//   @media screen and (min-width: 480px) {
-//     background-size: cover;
-//     background-position: center;
-//   }
-//   @media screen and (min-width: 768px) {
-//   }
-//   @media screen and (min-width: 1280px) {
-//   }
-// }
+.back {
+  width: 100%;
+  // min-height: 496px;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  // overflow: hidden;
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1280px) {
+  }
+}
 .contacts {
   display: block;
   width: 100%;
