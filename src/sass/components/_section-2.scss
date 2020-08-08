@@ -1,4 +1,7 @@
 .section-pricelist {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $table-upper;
   background-image: url('../images/section-price/price-480.png'),
     linear-gradient(#111319, #111319);
   background-repeat: no-repeat;
@@ -16,8 +19,7 @@
 
   @media screen and (min-width: 577px) {
     & {
-      background-image: url('../images/section-price/price-768.png'),
-        linear-gradient(#111319, #111319);
+      background-image: url('../images/section-price/price-768.png');
     }
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -155,6 +157,14 @@
 
   & + & {
     margin-top: 20px;
+  }
+
+  &-name {
+    text-align: start;
+  }
+
+  &-price {
+    white-space: nowrap;
   }
 }
 
