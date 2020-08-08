@@ -159,6 +159,14 @@
   & + & {
     margin-top: 20px;
   }
+
+  &-name {
+    text-align: start;
+  }
+
+  &-price {
+    white-space: nowrap;
+  }
 }
 
 .line {
