@@ -1,30 +1,39 @@
+footer * {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+}
 footer {
   width: 100%;
   background-color: #191c26;
   color: white;
-
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 30px;
-  /* identical to box height, or 167% */
-
   letter-spacing: 0.02em;
 }
 .booking {
-  // padding: 30px;
-  //   outline: 2px solid teal;
   padding-top: 100px;
   padding-bottom: 100px;
+  padding-right: 31px;
+  padding-left: 31px;
+  margin-left: auto;
+  margin-right: auto;
+
   @media screen and (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 100px;
+    padding-right: 39px;
+    padding-left: 39px;
+    max-width: $mobile-upper;
   }
   @media screen and (min-width: 1280px) {
     width: 50%;
-    // padding-left: 60px;
     padding-top: 124px;
+    padding-right: 55px;
+    padding-left: 55px;
+    max-width: $table-upper;
   }
   &-title {
     margin-bottom: 44px;
@@ -44,25 +53,18 @@ footer {
   }
 }
 .booking-list {
-  // color: rgba(157, 164, 189, 0.4);
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  @media screen and (min-width: 1280px) {
-  }
   &-item {
-    // outline: 1px solid red;
     line-height: 24px;
     margin-bottom: 30px;
     @media screen and (min-width: 768px) {
       display: flex;
-      // margin-right: 20px;
       flex-basis: 50%;
       width: 100%;
-    }
-    @media screen and (min-width: 1280px) {
     }
   }
   &-item:hover &-label,
@@ -87,9 +89,6 @@ footer {
       display: flex;
       width: auto;
       width: inherit;
-      // margin-left: 15px;
-    }
-    @media screen and (min-width: 1280px) {
     }
   }
 }
@@ -105,10 +104,9 @@ footer {
     margin-bottom: 100px;
     flex-basis: 100%;
   }
-  @media screen and (min-width: 1280px) {
-  }
 }
 .booking-list {
+  letter-spacing: 0.1em;
   &-item {
     position: relative;
   }
@@ -116,12 +114,8 @@ footer {
     line-height: 24px;
   }
   &-label {
-    font-family: Open Sans;
-    font-style: normal;
     font-weight: 600;
-    font-size: 11px;
-    line-height: 15px;
-    letter-spacing: 0.1em;
+
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.4);
     position: absolute;
@@ -143,17 +137,9 @@ footer {
   &-input:not(:focus-within) {
     color: white;
     opacity: 1;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 15px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     transition: 300ms ease;
   }
   &-input:focus-within ~ &-label {
-    //   &-input:not(:focus-within) ~ &-label {
     color: white;
   }
 }
@@ -169,14 +155,9 @@ footer {
 .button-wrapper {
   display: flex;
   justify-content: center;
-  // width: 100%;
   margin: 0;
-  @media screen and (min-width: 480px) {
-  }
   @media screen and (min-width: 768px) {
     justify-content: flex-start;
-  }
-  @media screen and (min-width: 1280px) {
   }
   &-hover .button-footer,
   &-focus .button-footer {
@@ -184,43 +165,36 @@ footer {
     transition: 300ms ease;
   }
 }
-.back {
+.footer-contacts-back {
   width: 100%;
-  // min-height: 496px;
+  height: auto;
   max-height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0.1;
-  // overflow: hidden;
-  @media screen and (min-width: 480px) {
-  }
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1280px) {
-  }
 }
 .contacts {
   display: block;
   width: 100%;
-  min-height: 496px;
-  z-index: 10;
-  position: relative;
-  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   padding-top: 84px;
   padding-bottom: 84px;
-  // background: url(../../images/footer_contacts_back.jpg);
+  background-image: url(/images/footer/footer_back.png),
+    linear-gradient(#111319, #111319);
   @media screen and (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 100px;
     margin: 0;
-    // background-image: url(../../images/header-480.jpg);
   }
   @media screen and (min-width: 1280px) {
     width: 50%;
     padding-top: 124px;
     padding-bottom: 100px;
+    background-image: url(/images/footer/footer_back_1280px.png),
+      linear-gradient(#111319, #111319);
   }
   &-title {
     margin-bottom: 44px;
@@ -233,23 +207,20 @@ footer {
     letter-spacing: 0.05em;
   }
   &-inner {
-    position: absolute;
     width: 100%;
     min-height: 100px;
-  }
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1280px) {
-    // padding-right: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: $mobile-upper) {
+      max-width: $mobile-upper;
+    }
+    @media screen and (min-width: $table-upper) {
+      max-width: $table-upper;
+    }
   }
 }
 .contacts-work-time {
   color: white;
-  font-family: Open Sans;
-  font-style: normal;
-  // font-weight: 600;
-  font-size: 11px;
-  line-height: 15px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-top: 10px;
@@ -265,7 +236,6 @@ footer {
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-around;
-    // margin-left: 70px;
   }
   @media screen and (min-width: 1280px) {
     flex-direction: column;
@@ -291,18 +261,10 @@ footer {
 .media-link {
   display: flex;
   justify-content: flex-end;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 15px;
   letter-spacing: 0.2em;
   margin-bottom: 10px;
   @media screen and (min-width: $mobile-upper) {
     margin: 0;
-  }
-
-  @media screen and (min-width: $table-upper) {
   }
   &-instagram {
     display: flex;
@@ -317,26 +279,10 @@ footer {
   }
 }
 .copyright-container {
-  // padding-right: 31px;
-  // padding-left: 31px;
-  // margin-left: auto;
-  // margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-
-  // @media screen and (min-width: $mobile-upper) {
-  // }
-
-  // @media screen and (min-width: $table-upper) {
-  //   padding-right: 55px;
-  //   padding-left: 55px;
-  // }
+  background-color: white;
 }
 .copyright {
   display: flex;
-  background-color: white;
-  // width: 100%;
   padding-right: 31px;
   padding-left: 31px;
   margin-left: auto;
@@ -346,30 +292,22 @@ footer {
     padding-right: 39px;
     padding-left: 39px;
   }
-
   @media screen and (min-width: $table-upper) {
     padding-right: 55px;
     padding-left: 55px;
   }
-
   &-icon {
     width: 12px;
     height: 12px;
     margin-right: 5px;
   }
   &-title {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 15px;
     letter-spacing: 0.2em;
     color: #9da4bd;
     text-align: left;
   }
   &-inner {
     width: 100%;
-    // padding: 45px 30px 45px 30px;
     padding-top: 45px;
     padding-bottom: 45px;
     @media screen and (min-width: 768px) {
@@ -377,9 +315,12 @@ footer {
       width: 100%;
       justify-content: space-between;
       flex-direction: row-reverse;
+      max-width: 768px;
+      margin-left: auto;
+      margin-right: auto;
     }
     @media screen and (min-width: 1280px) {
-      // padding: 45px 60px 45px 60px;
+      max-width: 1280px;
     }
   }
 }
@@ -403,7 +344,6 @@ footer {
   background-color: black;
 }
 .inner-line {
-  // position: relative;
   width: 100px;
   height: 28px;
   display: flex;
@@ -411,23 +351,24 @@ footer {
 }
 .inner-line::before {
   content: ' ';
-  // position: absolute;
   width: 60px;
   height: 1px;
   display: block;
   margin: 0 20px 0 0;
 }
 .external-wrapper {
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1280px) {
     display: flex;
+    width: 1280px;
   }
 }
 .contacts-title {
   @media screen and (min-width: 768px) {
     text-align: left;
-    // margin-left: 70px;
   }
   @media screen and (min-width: 1280px) {
     margin-left: 115px;
