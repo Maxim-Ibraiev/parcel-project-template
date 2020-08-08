@@ -2,29 +2,35 @@ footer {
   width: 100%;
   background-color: #191c26;
   color: white;
-
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
-  /* identical to box height, or 167% */
-
   letter-spacing: 0.02em;
 }
 .booking {
-  // padding: 30px;
-  //   outline: 2px solid teal;
   padding-top: 100px;
   padding-bottom: 100px;
+  padding-right: 31px;
+  padding-left: 31px;
+  margin-left: auto;
+  margin-right: auto;
+
   @media screen and (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 100px;
+    padding-right: 39px;
+    padding-left: 39px;
+    max-width: $mobile-upper;
   }
   @media screen and (min-width: 1280px) {
     width: 50%;
     // padding-left: 60px;
     padding-top: 124px;
+    padding-right: 55px;
+    padding-left: 55px;
+    max-width: $table-upper;
   }
   &-title {
     margin-bottom: 44px;
@@ -184,9 +190,9 @@ footer {
     transition: 300ms ease;
   }
 }
-.back {
+.footer-contacts-back {
   width: 100%;
-  // min-height: 496px;
+  height: auto;
   max-height: 100%;
   position: absolute;
   top: 0;
@@ -205,17 +211,19 @@ footer {
   width: 100%;
   min-height: 496px;
   z-index: 10;
-  position: relative;
-  background-size: cover;
+  // position: relative;
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   padding-top: 84px;
   padding-bottom: 84px;
-  // background: url(../../images/footer_contacts_back.jpg);
+  background-image: url(/images/footer/footer_back.png),
+    linear-gradient(#111319, #111319);
   @media screen and (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 100px;
     margin: 0;
-    // background-image: url(../../images/header-480.jpg);
+    // background-image: url(/header-480.jpg);
   }
   @media screen and (min-width: 1280px) {
     width: 50%;
@@ -233,14 +241,25 @@ footer {
     letter-spacing: 0.05em;
   }
   &-inner {
-    position: absolute;
+    // position: absolute;
     width: 100%;
     min-height: 100px;
-  }
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1280px) {
-    // padding-right: 60px;
+    padding-right: 31px;
+    padding-left: 31px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $mobile-upper) {
+      padding-right: 39px;
+      padding-left: 39px;
+      max-width: $mobile-upper;
+    }
+
+    @media screen and (min-width: $table-upper) {
+      padding-right: 55px;
+      padding-left: 55px;
+      max-width: $table-upper;
+    }
   }
 }
 .contacts-work-time {
@@ -317,26 +336,13 @@ footer {
   }
 }
 .copyright-container {
-  // padding-right: 31px;
-  // padding-left: 31px;
-  // margin-left: auto;
-  // margin-right: auto;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-
-  // @media screen and (min-width: $mobile-upper) {
-  // }
-
-  // @media screen and (min-width: $table-upper) {
-  //   padding-right: 55px;
-  //   padding-left: 55px;
-  // }
+  background-color: white;
 }
 .copyright {
   display: flex;
-  background-color: white;
-  // width: 100%;
   padding-right: 31px;
   padding-left: 31px;
   margin-left: auto;
@@ -346,12 +352,13 @@ footer {
     padding-right: 39px;
     padding-left: 39px;
   }
-
   @media screen and (min-width: $table-upper) {
     padding-right: 55px;
     padding-left: 55px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1280px;
   }
-
   &-icon {
     width: 12px;
     height: 12px;
@@ -369,7 +376,6 @@ footer {
   }
   &-inner {
     width: 100%;
-    // padding: 45px 30px 45px 30px;
     padding-top: 45px;
     padding-bottom: 45px;
     @media screen and (min-width: 768px) {
@@ -377,9 +383,6 @@ footer {
       width: 100%;
       justify-content: space-between;
       flex-direction: row-reverse;
-    }
-    @media screen and (min-width: 1280px) {
-      // padding: 45px 60px 45px 60px;
     }
   }
 }
@@ -403,7 +406,6 @@ footer {
   background-color: black;
 }
 .inner-line {
-  // position: relative;
   width: 100px;
   height: 28px;
   display: flex;
@@ -411,7 +413,6 @@ footer {
 }
 .inner-line::before {
   content: ' ';
-  // position: absolute;
   width: 60px;
   height: 1px;
   display: block;
@@ -422,12 +423,14 @@ footer {
   }
   @media screen and (min-width: 1280px) {
     display: flex;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 .contacts-title {
   @media screen and (min-width: 768px) {
     text-align: left;
-    // margin-left: 70px;
   }
   @media screen and (min-width: 1280px) {
     margin-left: 115px;
