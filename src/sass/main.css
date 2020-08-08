@@ -1012,7 +1012,7 @@ p {
 
 .section {
   margin-top: 84px;
-  margin-bottom: 84px;
+  margin-bottom: 119px;
 }
 
 .container.feature {
@@ -1115,6 +1115,11 @@ p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: -15px;
+}
+
+.container.feature .feature-box .feature-list .item:nth-child(2n) {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
 }
 
 .container.feature .feature-box .feature-list .item {
