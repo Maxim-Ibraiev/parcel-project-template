@@ -1,10 +1,5 @@
 // pictures 
 
-// header {
-//     display: inline-block;
-//     // width: 100%;
-// }
-
  header.container {
     padding: 0;
  }
@@ -13,7 +8,7 @@
     position: relative;
     
     max-width: 1125px;
-    height: 550px;
+    height: 580px;
 
     padding-left: 31px; 
     
@@ -59,6 +54,80 @@
             background-image: url(/images/header/header-1-2250@2x.jpg);
         }
     }
+}
+
+$headerList: "header-2", "header-3", "header-1";
+@each $header in $headerList {
+    .bg-#{$header} {
+        // left: 20%;
+        
+        height: 680px;
+        background-size: 100%, 680px;
+
+        // transform: translateX(-20%);
+        // transition: 250ms transform ease;
+
+        background-image: url("/images/header/#{$header}-609.jpg");
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+            background-image: url("/images/header/#{$header}-1218@2x.jpg");
+        }
+
+        @media screen and (min-width: $table-upper) {
+            background-image: url("/images/header/#{$header}-1125.jpg");
+
+            @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and (min-resolution: 2dppx) {
+                background-image: url("/images/header/#{$header}-2250@2x.jpg");
+        }
+        }
+    }
+}
+
+.button-back {
+    position: absolute;
+    bottom: 20px;
+    right: 100px;
+}
+.button-forward {
+    display: none;
+
+    position: absolute;
+    bottom: 40px;
+    right: 39px;
+
+    width: 60px;
+
+    padding: 10px 0px 10px 20px;
+
+    background-color: transparent;
+    border: none;
+
+    color: $white-sub-item;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    border-bottom: 1px solid $white-sub-item;
+
+    @media screen and (min-width: $mobile-upper) {
+        display: block;
+    }
+
+    &:hover {
+        color: $white-item;
+        border-bottom: 1px solid #fff;
+    }
+    // @extend .long-line;
+
+    // &::before {
+    //     position: absolute;
+    //     height: 60px;
+    //     width: 60px;
+    //     bottom: -8px;
+    //     background: #0ff;
+    // }
 }
 
 // logo
@@ -294,9 +363,7 @@ body.is-open {
 
 // description
 
-.hero-description {
-    width: 100%;
-    
+.hero-description {    
     padding-top: 208px;
 
     @media screen and (min-width: $mobile-upper) {
