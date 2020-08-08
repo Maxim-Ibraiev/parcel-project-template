@@ -184,6 +184,7 @@ footer {
   padding-bottom: 84px;
   background-image: url(/images/footer/footer_back.png),
     linear-gradient(#111319, #111319);
+  margin-right: 31p;
   @media screen and (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -205,14 +206,21 @@ footer {
     line-height: 49px;
     text-align: center;
     letter-spacing: 0.05em;
+    @media screen and (min-width: $mobile-upper) {
+      margin-left: 45px;
+    }
+    @media screen and (min-width: $table-upper) {
+    }
   }
   &-inner {
     width: 100%;
     min-height: 100px;
-    margin-left: auto;
-    margin-right: auto;
     @media screen and (min-width: $mobile-upper) {
       max-width: $mobile-upper;
+      margin-left: auto;
+      margin-right: auto;
+      // padding-left: 31px;
+      // padding-right: 31px;
     }
     @media screen and (min-width: $table-upper) {
       max-width: $table-upper;
@@ -233,9 +241,11 @@ footer {
 }
 .contacts-list {
   color: #9da4bd;
+  margin-left: 31px;
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-around;
+    margin-left: 0px;
   }
   @media screen and (min-width: 1280px) {
     flex-direction: column;
