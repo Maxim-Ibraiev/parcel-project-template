@@ -162,7 +162,9 @@ $headerList: "header-2", "header-3", "header-1";
 
     .hero-nav a,
     .hero-contacts a {
-        color: $white-item;
+        @media screen and (min-width: $mobile-upper) {
+            color: $white-item;
+        }
     }
 
     @media screen and (max-width: $mobile-lesser) {
@@ -176,6 +178,8 @@ $headerList: "header-2", "header-3", "header-1";
 
         padding-top: 118px;
         padding-left: 40px;
+
+        box-sizing: border-box;
 
         background: #fff;
 
@@ -213,9 +217,27 @@ $headerList: "header-2", "header-3", "header-1";
             margin-bottom: 64px;
         }
 
+        .hero-button.link-button {
+            display: none;
+        }
+
+        .fifth-button .hero-button.link-button{
+            display: block;
+        }
+
         .hero-youtube {
             margin-left: 80px;
         }
+    }
+}
+
+.fifth-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    
+    @media screen and (min-width: $mobile-upper) {
+        display: none;
     }
 }
 
@@ -256,6 +278,28 @@ a:hover {
 }
 
 // table menu
+
+.hero-nav {
+    @media screen and (max-width: $mobile-lesser) {
+        display: none;
+    }
+}
+
+.hero-nav-mobile,
+.hero-nav-mobile button {
+    display: block;
+  
+    background-color: transparent;
+    border: none;
+
+    font-weight: 600;
+    font-size: 18px;
+    
+    @media screen and (min-width: $mobile-upper) {
+        display: none;
+    }
+}
+
 @media screen and (min-width: $mobile-upper) {
     .hero-nav {
         display: flex;
