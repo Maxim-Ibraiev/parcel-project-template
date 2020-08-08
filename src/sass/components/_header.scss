@@ -167,6 +167,11 @@ $headerList: "header-2", "header-3", "header-1";
         }
     }
 
+    .hero-nav a:hover,
+    .hero-tel a:hover {
+        color: $accent;
+    }
+
     @media screen and (max-width: $mobile-lesser) {
         display: none;
 
@@ -207,14 +212,17 @@ $headerList: "header-2", "header-3", "header-1";
         }
         
         li:not(:last-child),
-        a {
-            margin-bottom: 24px;
+        .hero-tel,
+        .hero-instagram {
+            margin-bottom: 14px;
         }
         
-        li:last-child,
+        .hero-nav-mobile,
         .hero-button {
             width: 194px;
             margin-bottom: 64px;
+            
+            box-sizing: border-box;
         }
 
         .hero-button.link-button {
@@ -231,23 +239,28 @@ $headerList: "header-2", "header-3", "header-1";
     }
 }
 
-.fifth-button {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    
+//padding for link
+.hero-nav a,
+.hero-nav-mobile a,
+.hero-tel {
+    display: block;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     @media screen and (min-width: $mobile-upper) {
-        display: none;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 }
-
-.menu-over {
-    overflow: hidden;
+.hero-tel {
+    padding-top: 10px;
 }
 
-a:active,
-a:hover {
-    color: $accent;
+.hero-instagram,
+.hero-youtube {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .hero-instagram {
@@ -262,6 +275,27 @@ a:hover {
     @media screen and (min-width: $mobile-upper) {
     font-size: 11px;
     }
+}
+
+a:active,
+a:hover {
+    color: $accent;
+}
+
+.fifth-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    
+    @media screen and (min-width: $mobile-upper) {
+        display: none;
+    }
+}
+
+//backdrop
+
+.menu-over {
+    overflow: hidden;
 }
 
 .is-open {
@@ -288,7 +322,9 @@ a:hover {
 .hero-nav-mobile,
 .hero-nav-mobile button {
     display: block;
-  
+
+    padding: 0;  
+
     background-color: transparent;
     border: none;
 
