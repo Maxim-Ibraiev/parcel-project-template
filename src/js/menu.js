@@ -17,13 +17,79 @@
       
       backdropBtnRef.classList.toggle("menu-backdrop");
 
-      mobileMenuRef.classList.toggle("menu-scrol");
+      // mobileMenuRef.classList.toggle("menu-scrol");
+
+    });
+    
+    // mobile link
+
+    const menuLinkBtn1Ref = document.querySelector("[data-link-button1]");
+
+    menuLinkBtn1Ref.addEventListener("click", () => {
+      menuBtnRef.classList.toggle("is-open");
+
+      mobileMenuRef.classList.toggle("is-open");
+
+      backdropOverBtnRef.classList.toggle("menu-over");
+
+      backdropBtnRef.classList.toggle("menu-backdrop");
 
     });
 
-    
-    
+    const menuLinkBtn2Ref = document.querySelector("[data-link-button2]");
+
+    menuLinkBtn2Ref.addEventListener("click", () => {
+      menuBtnRef.classList.toggle("is-open");
+
+      mobileMenuRef.classList.toggle("is-open");
+
+      backdropOverBtnRef.classList.toggle("menu-over");
+
+      backdropBtnRef.classList.toggle("menu-backdrop");
+
+    });
+
+    const menuLinkBtn3Ref = document.querySelector("[data-link-button3]");
+
+    menuLinkBtn3Ref.addEventListener("click", () => {
+      menuBtnRef.classList.toggle("is-open");
+
+      mobileMenuRef.classList.toggle("is-open");
+
+      backdropOverBtnRef.classList.toggle("menu-over");
+
+      backdropBtnRef.classList.toggle("menu-backdrop");
+
+    });
+
+    const menuLinkBtn4Ref = document.querySelector("[data-link-button4]");
+
+    menuLinkBtn4Ref.addEventListener("click", () => {
+      menuBtnRef.classList.toggle("is-open");
+      
+      mobileMenuRef.classList.toggle("is-open");
+
+      backdropOverBtnRef.classList.toggle("menu-over");
+
+      backdropBtnRef.classList.toggle("menu-backdrop");
+
+    });
+
+    const menuLinkBtn5Ref = document.querySelector("[data-link-button5]");
+
+    menuLinkBtn5Ref.addEventListener("click", () => {
+      menuBtnRef.classList.toggle("is-open");
+
+      mobileMenuRef.classList.toggle("is-open");
+
+      backdropOverBtnRef.classList.toggle("menu-over");
+
+      backdropBtnRef.classList.toggle("menu-backdrop");
+
+    });
+
     //gallery
+
     let n = 1;
     let i = 0;
     let  bgHeader = "bg-header-";
