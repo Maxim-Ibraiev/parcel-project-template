@@ -1,5 +1,6 @@
 (() => {
-    const backdropBtnRef = document.querySelector("[data-menu-backdrop]");
+    const backdropOverBtnRef = document.querySelector("[data-menu-over]");
+    const backdropBtnRef = document.querySelector("[data-backdrop]");
     const menuBtnRef = document.querySelector("[data-menu-button]");
     const mobileMenuRef = document.querySelector("[data-menu]");
   
@@ -12,6 +13,10 @@
   
       mobileMenuRef.classList.toggle("is-open");
       
-      backdropBtnRef.classList.toggle("is-open");
+      backdropOverBtnRef.classList.toggle("menu-over");
+      
+      backdropBtnRef.classList.toggle("menu-backdrop");
+
+      mobileMenuRef.classList.toggle("menu-scrol");
     });
   })();

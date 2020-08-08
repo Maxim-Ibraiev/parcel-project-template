@@ -1,4 +1,7 @@
 .galery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 84px;
   padding-bottom: 84px;
 
@@ -12,6 +15,16 @@
   @media screen and (min-width: $table-upper) {
     padding-top: 130px;
     padding-bottom: 130px;
+  }
+}
+
+.galery .container {
+  @media screen and (min-width: $mobile-upper) {
+    max-width: $mobile-upper;
+  }
+
+  @media screen and (min-width: $table-upper) {
+    max-width: $table-upper;
   }
 }
 
@@ -38,7 +51,6 @@
 
 .galery-list {
   margin: -15px;
-
   @media screen and (min-width: $mobile-upper) {
     display: flex;
     flex-wrap: wrap;
@@ -47,37 +59,21 @@
 
 .galery-item {
   margin: 15px;
-  width: calc(100%-60px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media screen and (min-width: $mobile-upper) {
-    width: calc((100% - 4 * 15) / 2);
+    flex-basis: calc((100% - (4 * 15px)) / 2);
+    max-width: $mobile-upper;
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
   }
   @media screen and (min-width: $table-upper) {
-    width: calc((100% - 8 * 5) / 4);
+    flex-basis: calc((100% - 8 * 15px) / 4);
+    max-width: $table-upper;
   }
 }
-
-// .galery-list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin: -30px;
-// }
-
-// .galery-list__item {
-//   margin: 30px;
-//   width: calc(100% - 60px);
-
-//   @media screen and (min-width: 768px) {
-//     width: calc((100% - 4 * 15) / 2);
-//   }
-
-//   @media screen and (min-width: 767px) {
-//     &:not(:last-child) {
-//       margin-bottom: 30px;
-//     }
-//   }
-
-//   @media screen and (min-width: 1200px) {
-//     width: calc((100% - 8 * 5) / 4);
-//   }
-// }

@@ -1,11 +1,7 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .section-pricelist {
-  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $table-upper;
   background-image: url('../images/section-price/price-480.png'),
     linear-gradient(#111319, #111319);
   background-repeat: no-repeat;
@@ -54,25 +50,20 @@
   }
 }
 
-.pricelist-container {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 84px 31px;
+.pricelist.container {
+  padding-top: 84px;
+  padding-bottom: 84px;
 
   text-align: center;
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and (min-width: $mobile-upper) {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding: 100px 39px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-    padding: 130px 15px;
+  @media screen and (min-width: $table-upper) {
+    padding-top: 130px;
+    padding-bottom: 130px;
   }
 }
 
@@ -131,7 +122,7 @@
     font-size: 18px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $table-upper) {
     display: flex;
     padding: 0;
   }
@@ -145,7 +136,7 @@
 .pricelist-list.left {
   margin-bottom: 20px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $table-upper) {
     margin-bottom: 0;
     padding: 30px;
     flex-grow: 1;
@@ -153,7 +144,7 @@
 }
 
 .pricelist-list.right {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $table-upper) {
     padding: 30px;
     flex-grow: 1;
     background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
