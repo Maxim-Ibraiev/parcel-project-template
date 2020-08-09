@@ -108,6 +108,14 @@
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
+
+        @media screen and (min-width: $mobile-upper) {
+            width: 480px;
+        }
+
+        @media screen and (min-width: $table-upper) {
+            width: 400px;
+        }
         
         .item:nth-child(2n) {
             transform: translateY(30px);
@@ -123,6 +131,7 @@
         text-align: center;
         
         width: calc((100% - 2 * 30px) / 2);
+        box-sizing: border-box;
         margin: 15px;
 
         .number {
