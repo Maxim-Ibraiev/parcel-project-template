@@ -5,6 +5,7 @@
 
 .container.feature {
     
+    
     background-color: $white-item;
     
    
@@ -51,6 +52,7 @@
         }
 
         .title-box {
+            
             @media screen and (min-width: 480px){
                 width: 480px;
             }
@@ -63,7 +65,8 @@
             } 
             @media screen and (min-width:1200px) {
        
-                margin: 0;
+                margin-left: auto;
+                margin-right: auto;
                 
         
             }
@@ -85,6 +88,7 @@
 
     
     .feature-box {
+        
         @media screen and (min-width: 480px){
             width: 480px;
         }
