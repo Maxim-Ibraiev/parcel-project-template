@@ -1121,7 +1121,7 @@ p {
 @media screen and (min-width: 1200px) {
   .container.feature .feature-box {
     margin-left: auto;
-    margin-right: 133px;
+    margin-right: auto;
   }
 }
 
