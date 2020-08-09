@@ -3,13 +3,14 @@ h2,
 h3,
 h4,
 p {
-  margin-top: 0;
   margin-bottom: 0;
 }
 
 .container-about {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 31px;
+  padding-right: 31px;
 
   @media screen and (max-width: $mobile-lesser) {
     width: 418px;
@@ -41,7 +42,7 @@ p {
   align-items: center;
 
   margin-top: -20px;
-  /* margin-top: 84px; */
+
   margin-left: 31px;
   font-family: Open Sans;
 
@@ -75,7 +76,6 @@ p {
 }
 
 .title {
-  // margin-top: 20px;
   font-family: Raleway;
 
   font-weight: 900;
@@ -109,8 +109,6 @@ p {
   @media screen and (min-width: $mobile-upper) {
     margin-left: 30px;
     margin-right: 0;
-
-    // padding-right: 39px;
   }
 
   @media screen and (min-width: $table-upper) {
@@ -135,7 +133,7 @@ p {
   width: 160px;
   height: 40px;
   text-align: center;
-  padding-top: 12px;
+
   font-family: Open Sans;
 
   font-weight: 600;
@@ -144,16 +142,15 @@ p {
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
-  // color: #3b1717;
+  color: $basic-item;
   border: 1px solid $accent;
-  // background-color: #ffffff;
+  background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 25px;
 
   &:hover,
   &:focus {
     background: $accent;
-    color: $white-item;
   }
 
   @media screen and (min-width: $mobile-upper) {
@@ -162,6 +159,15 @@ p {
 
   @media screen and (min-width: $table-upper) {
     margin-left: 64px;
+  }
+
+  a {
+    color: $basic-item;
+
+    &:hover,
+    &:focus {
+      color: $white-item;
+    }
   }
 }
 
