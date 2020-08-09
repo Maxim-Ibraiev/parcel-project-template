@@ -278,7 +278,8 @@ $headerList: "header-2", "header-3", "header-1";
 }
 
 a:active,
-a:hover {
+a:hover,
+.menu .hero-contacts .hero-tel:hover {
     color: $accent;
 }
 
