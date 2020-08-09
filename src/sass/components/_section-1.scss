@@ -9,6 +9,8 @@ p {
 .container-about {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 31px;
+  padding-right: 31px;
 
   @media screen and (max-width: $mobile-lesser) {
     width: 418px;
@@ -131,7 +133,7 @@ p {
   width: 160px;
   height: 40px;
   text-align: center;
-  // padding-top: 12px;
+
   font-family: Open Sans;
 
   font-weight: 600;
@@ -142,7 +144,7 @@ p {
 
   color: $basic-item;
   border: 1px solid $accent;
-
+  background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 25px;
 
